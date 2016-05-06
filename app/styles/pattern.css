@@ -1,0 +1,43 @@
+@import "../../bower_components/normalize-css/normalize.css";
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+
+  font-family: "Source Sans Pro", sans-serif;;
+  color: #333;
+
+  background: #fafafa;
+}
+
+@for $i from 1 to 6 {
+  h$i {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+
+  color: #000;
+
+  background: #ccc;
+}
+
+@import "pattern/variables";
+@import "pattern/layout";
+@import "pattern/utilities";
+@import "pattern/sidebar";
+@import "pattern/main";
+@import "pattern/swatch";

@@ -1,0 +1,135 @@
+@b pl {
+  color: $color-text;
+
+  a {
+    color: $color-link;
+  }
+
+  @e title {
+    padding-bottom: calc(1rem);
+    margin-top: 0;
+
+    color: $color-text;
+  }
+
+  @e rule {
+    height: 2px;
+
+    background: $color-text;
+
+    border: none;
+  }
+
+  @e block {
+    padding: 1rem 0;
+  }
+
+  @e notes {
+    padding: calc(1em * 0.8);
+
+    background: color($charade a(10%));
+    border-radius: 6px;
+  }
+
+  @e example {
+    margin: calc(1em * 2) 0 calc(1em * 6);
+  }
+
+  @e example-title {
+    padding-bottom: calc(1em / 2);
+    margin: 0;
+
+    color: $color-primary;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid currentColor;
+  }
+
+  @e palette {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
+@b swatch {
+  position: relative;
+
+  min-height: 90px;
+  max-width: 300px;
+  width: 100%;
+  padding-left: 90px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+
+    height: 70px;
+    width: 70px;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    border-radius: 6px;
+  }
+
+  @e copy {
+    font-size: 12px;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1rem;
+    }
+  }
+
+  @m primary::before {
+    background: $color-primary;
+  }
+
+  @m secondary::before {
+    background: $color-secondary;
+  }
+
+  @m text::before {
+    background: $charade;
+  }
+
+  @m link::before {
+    background: $matisse;
+  }
+
+  @m bg::before {
+    background: $givry;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+
+  color: $color-secondary;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background: $color-primary;
+  border-radius: 6px;
+
+  @media (--medium-viewport) {
+    display: inline-block;
+  }
+}
+
+pre[class*="language-"] {
+  margin: 0;
+
+  border-radius: 6px;
+
+  overflow-x: auto;
+}
